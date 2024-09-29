@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://yigit1.marqby.us';
+const API_URL = 'https://yigit2.marqby.us';
 
 export const getProducts = async () => {
   const response = await axios.get(`${API_URL}/products`);

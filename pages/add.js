@@ -36,25 +36,27 @@ export default function AddProduct() {
   })
 
   const onSubmit = async (data) => {
-    setIsLoading(true)
+    console.log("Form Data:", data); // Debugging line
+    setIsLoading(true);
     try {
-      await addProduct(data)
+      await addProduct(data); // Ensure addProduct handles promises correctly
       toast({
         title: "Success",
         description: "Product added successfully.",
-      })
-      router.push("/")
+      });
+      router.push("/");
     } catch (error) {
-      console.error("Error adding product:", error)
+      console.error("Error adding product:", error);
       toast({
         title: "Error",
         description: "An error occurred while adding the product.",
         variant: "destructive",
-      })
+      });
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
+  
 
   return (
     <div className="container mx-auto py-10">
