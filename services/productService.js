@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3003';
+const API_URL = 'https://yigit1.marqby.us';
 
 export const getProducts = async () => {
   const response = await axios.get(`${API_URL}/products`);
